@@ -1,4 +1,4 @@
-@import url("https://fonts.googlepis.com/css2?family=Monsterrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 html {
   font-size: 62.5%;
@@ -16,7 +16,7 @@ input,
 select,
 button, 
 textarea {
-  font-family: Monsterrat,Arial, Helvetica, sans-serif;
+  font-family: Montserrat,Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
   
 }
@@ -140,4 +140,18 @@ footer{
 
 .button.primary{
   background-color: #f0c040;
+}
+
+/* Filter section */
+
+.filter{
+  display: flex;
+  padding: 1rem;
+  margin: 1rem;
+  border-bottom: 0.1rem #c0c0c0 solid;
+  justify-content: space-between;
+}
+
+.filter div {
+  flex: 1;
 }
