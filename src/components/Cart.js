@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import formatCurrency from '../util';
+import { Bounce, Slide  } from "react-awesome-reveal";
 
 export default class Cart extends Component {
     constructor(props){
@@ -36,6 +37,7 @@ export default class Cart extends Component {
             )}
                   <div>
                 <div className='cart' >
+                    <Bounce  delay={2} cascade >
                     <ul className='cart-items' >
                         {cartItems.map(item =>(
                             <li key={item._id} >
@@ -55,6 +57,7 @@ export default class Cart extends Component {
                             </li>
                         ))}
                     </ul>
+                    </Bounce >
                 </div>
                 {cartItems.length!==0 && (
                     <div>
@@ -71,6 +74,7 @@ export default class Cart extends Component {
  
                  </div>
                  {this.state.showCheckout && (
+                     <Slide right cascade>
                      <div className='cart' >
                      <form onSubmit={this.createOrder} >
                          <ul className="form-container" >
@@ -107,6 +111,7 @@ export default class Cart extends Component {
                          </ul>
                      </form>
                      </div>
+                     </Slide>
                  )}
                  </div>
                 )}
